@@ -1,0 +1,11 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="PropertiesComponent">
+        <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+        <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/AndroidStudioProjects" />
+        <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+      </component>
+    </defaultProject>
+  </component>
+</application>

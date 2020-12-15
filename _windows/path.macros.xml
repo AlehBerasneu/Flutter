@@ -1,0 +1,6 @@
+<application>
+  <component name="PathMacrosImpl">
+    <macro name="KOTLIN_BUNDLED" value="C:\Users\user\AppData\Roaming\Google\AndroidStudio4.1\plugins\Kotlin\kotlinc" />
+    <macro name="flutter" value="F:/flutter/bin" />
+  </component>
+</application>
