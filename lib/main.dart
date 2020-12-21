@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:telegram_flutter/pages/HomePage.dart';
+import 'package:provider/provider.dart';
 import 'package:telegram_flutter/pages/LoginPage.dart';
+
+
+import 'models/Country.dart';
+import 'models/Message.dart';
+import 'models/People.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,17 +14,20 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Telegram_flutter',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          backgroundColor: Colors.white,
-            textTheme: GoogleFonts.marmeladTextTheme(
-              Theme.of(context).textTheme,
-
-            ),
+    return MultiProvider(
+      providers:[
+        ChangeNotifierProvider<CountryDataProvider>(
+          create:(context)=>CountryDataProvider(),
         ),
-      home: LoginPage(),
+        ChangeNotifierProvider<PeopleDataProvider>(
+          create:(context)=>PeopleDataProvider(),
+        ),
+      ChangeNotifierProvider<MessageDataProvider>(
+         create:(context)=>MessageDataProvider(),)
+      ],
+      child: MaterialApp(
+        home: LoginPage(),
+      ),
     );
   }
 }

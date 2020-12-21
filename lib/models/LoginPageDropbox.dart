@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class LoginPageDropBox extends StatefulWidget {
   LoginPageDropBox({Key key}) : super(key: key);
 
@@ -8,7 +9,7 @@ class LoginPageDropBox extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<LoginPageDropBox> {
-  String dropdownValue = 'Belarus';
+    String dropdownValue = 'Belarus';
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +26,11 @@ class _MyStatefulWidgetState extends State<LoginPageDropBox> {
       onChanged: (String newValue) {
         setState(() {
           dropdownValue = newValue;
+          ;
+
         });
       },
-      items: <String>['Belarus', 'test2', 'test3']
-          .map<DropdownMenuItem<String>>((String value) {
+      items: <String>["Belarus","Russia"].map<DropdownMenuItem<String>>((value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),
@@ -37,3 +39,6 @@ class _MyStatefulWidgetState extends State<LoginPageDropBox> {
     );
   }
 }
+
+
+
